@@ -9,11 +9,22 @@
     font-style: normal;
 }
 
+:root {
+    --odin-plant-green: #596D48;
+    --odin-light-gray: #E5E7EB;
+    --main-margin-left: 1.5rem;
+    --plant-green-light: #9eb58a;
+    --light-box-shadow: 1px 1px 2px 1px #DfDfDf;
+}
+
 html {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-size: 100%;
-    font-family: 'Open Sans', 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: .001px;
     color: #000;
 }
 
@@ -21,6 +32,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    font-size: inherit;
 }
 
 body {
@@ -28,14 +40,14 @@ body {
     padding: 0;
     min-height: 100vh;
     min-height: 100svh;
-    background-color: #eee;
+    background-color: #f9faff;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
 header {
-    flex-basis: 38%;
+    flex-basis: 37%;
     background-image: url("../images/halie-west-unsplash.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -51,12 +63,14 @@ header {
         bottom: .5rem;
         width: 100%;
         font-size: 50%;
+        font-weight: 400;
         text-align: center;
         color: #fff;
 
         >a {
             color: inherit;
             font-weight: inherit;
+            cursor: pointer;
         }
     }
 }
@@ -71,33 +85,155 @@ header {
 
 h1 {
     font-family: 'Norse Bold';
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: #fff;
-    margin: 1rem;
+    margin: 0;
 }
 
 .logo {
-    width: 3em;
+    width: 3.25em;
     height: auto;
+    margin: .5rem .1rem;
 }
 
 main {
-    flex-basis: auto;
+    flex-basis: 63%;
     margin: 0;
     padding: 0;
-    padding-left: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.message {
-    width: 80%;
-    max-width: 480px;
-    font-size: 75%;
-    font-weight: bold;
-}
-
 .em {
     font-style: italic;
+}
+
+.message {
+    width: 85%;
+    max-width: 480px;
+    font-size: 83%;
+    font-weight: inherit;
+    padding: var(--main-margin-left);
+}
+
+br {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+input,
+button {
+    font: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 100%;
+
+    >fieldset {
+        --vertical-margin: .5rem;
+        background-color: #fff;
+        width: 100%;
+        margin: .75rem auto;
+        padding-left: var(--main-margin-left);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: calc(var(--main-margin-left) * .75);
+        row-gap: 0;
+        box-shadow: 2px 2px 2.5px 1px #DfDfDf;
+
+        >legend {
+            float: left;
+            margin: var(--vertical-margin) 0;
+            font-size: 80%;
+            flex-basis: 100%;
+
+            +div {
+                clear: both;
+            }
+        }
+
+        >div {
+            margin-bottom: .5rem;
+            flex-basis: 35%;
+
+            >label,
+            >input {
+                line-height: .5rem;
+                color: #333;
+            }
+
+            label {
+                text-transform: uppercase;
+                font-size: 45%;
+                letter-spacing: .75px;
+            }
+
+            >input {
+                width: 90%;
+                border: 1px solid var(--odin-light-gray);
+                border-radius: .1rem;
+                display: block;
+                padding: .2rem;
+                margin: 0;
+                font-size: 60%;
+
+                &:focus {
+                    border-color: #37f;
+                    box-shadow: var(--light-box-shadow);
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &>div {
+        margin-left: var(--main-margin-left);
+
+        >button {
+            background-color: var(--odin-plant-green);
+            margin-top: .5rem;
+            padding: .35rem 1.85rem;
+            border-radius: .25rem;
+            font-size: .65rem;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            box-shadow: var(--light-box-shadow);
+
+            &:active {
+                background-color: var(--plant-green-light);
+            }
+        }
+
+        &:last-of-type {
+            margin-top: 1rem;
+            font-size: 63%;
+            color: #333;
+
+            >a {
+                color: var(--odin-plant-green);
+                font-size: inherit;
+                font-weight: bold;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:active {
+                    background-color: var(--plant-green-light);
+                }
+            }
+        }
+    }
 }
