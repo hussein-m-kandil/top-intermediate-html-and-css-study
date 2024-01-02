@@ -19,6 +19,7 @@
     --red-border-color: #f53;
     --border-color: #0ab;
     --input-text-color: #333;
+    --field-margin-bottom: .5rem;
 }
 
 html {
@@ -166,6 +167,9 @@ form {
             margin: var(--vertical-margin) 0;
             font-size: 80%;
             flex-basis: 100%;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            padding: 0;
 
             +div {
                 clear: both;
@@ -173,12 +177,14 @@ form {
         }
 
         >div {
-            margin-bottom: .5rem;
+            margin-bottom: var(--field-margin-bottom);
             flex-basis: 35%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            width: 90%;
+            max-width: 720px;
 
             >label,
             >input {
@@ -304,4 +310,42 @@ input[type="password"]:invalid,
 
 span[aria-label="required"] {
     color: var(--red-border-color);
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+
+    header,
+    main {
+        flex-basis: auto;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    main {
+        flex-grow: 2;
+        justify-content: flex-start;
+    }
+
+    form {
+        >fieldset {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: initial;
+            row-gap: initial;
+
+            >div {
+                width: 90%;
+                flex-basis: auto;
+                margin-bottom: var(--field-margin-bottom);
+
+                >input,
+                input[type="password"]+span {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
 }
