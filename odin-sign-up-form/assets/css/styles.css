@@ -271,6 +271,7 @@ form {
             margin-top: 1rem;
             font-size: 63%;
             color: #333;
+            padding-bottom: .75rem;
 
             >a {
                 color: var(--odin-plant-green);
@@ -315,6 +316,7 @@ span[aria-label="required"] {
 @media (orientation: portrait) {
     body {
         flex-direction: column;
+        min-height: initial;
     }
 
     header,
@@ -322,6 +324,21 @@ span[aria-label="required"] {
         flex-basis: auto;
         flex-grow: 1;
         width: 100%;
+    }
+
+    header {
+        position: static;
+        justify-content: space-between;
+        min-height: 135px;
+
+        &>div.hero {
+            margin-top: 1rem;
+        }
+
+        &>div:last-of-type {
+            position: static;
+            margin-bottom: .2rem;
+        }
     }
 
     main {
