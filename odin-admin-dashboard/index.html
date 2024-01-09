@@ -11,18 +11,21 @@
 <body>
     <header>
         <form class="search-form" action="">
-            <button type="submit">S</button>
+            <button type="submit">
+                <img class="icon" src="./assets/icons/magnify.svg" alt="Magnify icon" width="15" height="15">
+            </button>
             <label for="search">
                 <span>Search</span>
                 <input type="text" name="search" id="search">
             </label>
         </form>
-        <div class="notifications">N</div>
+        <img class="notifications icon" src="./assets/icons/bell-ring-outline.svg" alt="Bell icon" width="15"
+            height="15">
         <div class="profile-link">
-            <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
-            <a class="name-link">S1m 0ne (@s1m0ne)</a>
+            <img src="./assets/images/cg-hand.jpg" alt="Profile picture" width="25" height="25">
+            <a class="name-link">S1m 0ne</a>
         </div>
-        <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
+        <img src="./assets/images/cg-hand.jpg" alt="Profile picture" width="40" height="40">
         <div class="name-greeting">
             <div class="greeting">Hi there,</div>
             <div class="name">S1m 0ne (@s1m0ne)</div>
@@ -32,19 +35,50 @@
         <button type="button" class="blue-btn">Share</button>
     </header>
     <nav>
-        <div><span class="logo"></span>Dashboard</div>
-        <ul class="main-links">
-            <li class="main-link"><span class="icon"></span><a href="#">Home</a></li>
-            <li class="main-link"><span class="icon"></span><a href="#">Profile</a></li>
-            <li class="main-link"><span class="icon"></span><a href="#">Message</a></li>
-            <li class="main-link"><span class="icon"></span><a href="#">History</a></li>
-            <li class="main-link"><span class="icon"></span><a href="#">Tasks</a></li>
-            <li class="main-link"><span class="icon"></span><a href="#">Communities</a></li>
-        </ul>
-        <ul class="conf-links">
-            <li class="conf-link"><span class="icon"></span><a href="#">Settings</a></li>
-            <li class="conf-link"><span class="icon"></span><a href="#">Support</a></li>
-            <li class="conf-link"><span class="icon"></span><a href="#">Privacy</a></li>
+        <ul class="nav-links">
+            <li class="nav-head">
+                <img class="logo icon" src="./assets/icons/view-dashboard.svg" alt="Dashboard icon" width="25"
+                    height="25">
+                <span>Dashboard</span>
+            </li>
+            <li class="nav-link main first">
+                <img class="icon" src="./assets/icons/home.svg" alt="Home icon" width="15" height="15">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-link main">
+                <img class="icon" src="./assets/icons/card-account-details-outline.svg" alt="Profile account icon"
+                    width="15" height="15">
+                <a href="#">Profile</a>
+            </li>
+            <li class="nav-link main">
+                <img class="icon" src="./assets/icons/message-reply.svg" alt="Message icon" width="15" height="15">
+                <a href="#">Message</a>
+            </li>
+            <li class="nav-link main">
+                <img class="icon" src="./assets/icons/clock-time-three-outline.svg" alt="Clock icon" width="15"
+                    height="15">
+                <a href="#">History</a>
+            </li>
+            <li class="nav-link main">
+                <img class="icon" src="./assets/icons/file-multiple.svg" alt="File icon" width="15" height="15">
+                <a href="#">Tasks</a>
+            </li>
+            <li class="nav-link main">
+                <img class="icon" src="./assets/icons/account-group.svg" alt="People group icon" width="15" height="15">
+                <a href="#">Communities</a>
+            </li>
+            <li class="nav-link conf first">
+                <img class="icon" src="./assets/icons/cog.svg" alt="Cog icon" width="15" height="15">
+                <a href="#">Settings</a>
+            </li>
+            <li class="nav-link conf">
+                <img class="icon" src="./assets/icons/help-box.svg" alt="Help icon" width="15" height="15">
+                <a href="#">Support</a>
+            </li>
+            <li class="nav-link conf">
+                <img class="icon" src="./assets/icons/shield-check.svg" alt="Shield icon" width="15" height="15">
+                <a href="#">Privacy</a>
+            </li>
         </ul>
     </nav>
     <main>
@@ -54,61 +88,88 @@
                 <div class="card">
                     <div class="card-title">Super Cool Project</div>
                     <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vero minima vitae corporis quaerat
-                        maiores expedita, tempore voluptas natus ab minus amet omnis officia ullam aliquid quam.
-                        Maiores,
-                        voluptates dolorem?
+                        Fuga vero minima vitae corporis quaerat tempore voluptas natus ab minus amet omnis officia ullam
+                        aliquid quam.
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-title">Less Cool Project</div>
                     <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aperiam praesentium. Quos,
-                        cumque corrupti tenetur reprehenderit aut esse provident dolorem at enim! Molestiae earum magnam
-                        quam, nisi vel vitae pariatur!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos!
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-title">Impossible App</div>
                     <div class="card-body">
                         Fugit nulla facilis veritatis sint numquam esse ullam, modi odio corrupti, consectetur rem
-                        voluptas,
-                        similique aperiam quasi error unde magni delectus! Esse inventore possimus temporibus aliquam
-                        assumenda sunt nihil ut!
+                        voluptas!
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-title">Easy Peasy App</div>
                     <div class="card-body">
-                        Quidem incidunt dolorum, quis eius debitis veniam eos dolores illo laudantium numquam? Nostrum
-                        iusto
-                        fugiat, ipsa, blanditiis asperiores tenetur sequi eius impedit eligendi animi laborum qui quo
-                        aspernatur facere temporibus.
+                        Quidem incidunt dolorum, quis eius debitis veniam eos dolores illo laudantium.
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-title">Ad Blocker</div>
                     <div class="card-body">
-                        Ratione, laudantium id? Illo commodi quasi repudiandae eos porro possimus similique. Explicabo
-                        eligendi repudiandae dolorem perferendis voluptatem iste totam aperiam sed esse et officiis
-                        facilis,
-                        numquam odit optio nisi quo?
+                        Ratione, laudantium id? Illo commodi quasi repudiandae eos porro possimus similique.
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card-title">Money Maker</div>
                     <div class="card-body">
-                        Modi consequuntur aspernatur est ab laudantium nam veritatis tempora tenetur! Vero similique
-                        dolore
-                        expedita? Iure, labore odit nam assumenda fuga nisi, minima dolor sapiente et, aliquam soluta
-                        laborum. Aperiam, voluptates?
+                        Modi consequuntur aspernatur est ab laudantium nam veritatis tempora tenetur!
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer">
+                        <img class="icon" src="./assets/icons/star-plus-outline.svg" alt="Star plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/eye-plus-outline.svg" alt="Eye plus icon" width="15"
+                            height="15">
+                        <img class="icon" src="./assets/icons/share-variant-outline.svg" alt="Share icon" width="15"
+                            height="15">
+                    </div>
                 </div>
             </div>
         </section>
@@ -118,22 +179,20 @@
                 <div class="announcement">
                     <div class="announce-head">Site Maintenance</div>
                     <div class="announce-body">
-                        Architecto, voluptas? Dolorem esse eaque, ipsa
-                        suscipit corporis sapiente aliquid!
+                        Architecto, voluptas? Dolorem esse eaque, sapiente aliquid!
                     </div>
                 </div>
                 <div class="announcement">
                     <div class="announce-head">Community Share Day</div>
                     <div class="announce-body">
                         Cum fugiat ipsam impedit! Repudiandae corrupti suscipit iure
-                        enim fugit! Quod, repudiandae!
+                        enim fugit!
                     </div>
                 </div>
                 <div class="announcement">
                     <div class="announce-head">Updated Privacy Policy</div>
                     <div class="announce-body">
-                        Aspernatur doloribus repellendus alias nemo obcaecati numquam labore modi porro exercitationem
-                        voluptate aperiam tempore omnis odio placeat!
+                        Aspernatur doloribus repellendus alias nemo obcaecati placeat!
                     </div>
                 </div>
             </div>
@@ -141,25 +200,25 @@
         <section class="trending">
             <div class="sec-title">Trending</div>
             <div class="card trendy-profiles">
-                <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
+                <img src="./assets/images/mario_03.jpg" alt="Profile picture." width="25" height="25">
                 <div class="trendy-info">
-                    <div class="trendy-name"><a href="#">@tegan</a></div>
-                    <div class="trendy-about">World Peace Builder</div>
+                    <div class="trendy-name"><a href="#">@mario</a></div>
+                    <div class="trendy-about">Super Mario</div>
                 </div>
-                <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
+                <img src="./assets/images/cg-hand.jpg" alt="Profile picture." width="25" height="25">
                 <div class="trendy-info">
                     <div class="trendy-name"><a href="#">@s1m0ne</a></div>
-                    <div class="trendy-about">Super Coll Project</div>
+                    <div class="trendy-about">CG Actress</div>
                 </div>
-                <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
+                <img src="./assets/images/mario_02.jpg" alt="Profile picture." width="25" height="25">
                 <div class="trendy-info">
-                    <div class="trendy-name"><a href="#">@kendall</a></div>
-                    <div class="trendy-about">Life Changing App</div>
+                    <div class="trendy-name"><a href="#">@misty</a></div>
+                    <div class="trendy-about">I Do Not Know It! :)</div>
                 </div>
-                <img src="./refs/dashboard-project.png" alt="Profile picture." width="25" height="25">
+                <img src="./assets/images/mario_01.jpg" alt="Profile picture." width="25" height="25">
                 <div class="trendy-info">
-                    <div class="trendy-name"><a href="#">@alex</a></div>
-                    <div class="trendy-about">No Traffic Maker</div>
+                    <div class="trendy-name"><a href="#">@luigi</a></div>
+                    <div class="trendy-about">Super Luigi</div>
                 </div>
             </div>
         </section>

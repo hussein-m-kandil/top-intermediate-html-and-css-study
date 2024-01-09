@@ -25,6 +25,12 @@ ul {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
 
 input,
 button {
@@ -43,6 +49,11 @@ button {
 img {
     aspect-ratio: 1;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon {
+    cursor: initial;
 }
 
 html {
@@ -72,18 +83,18 @@ body {
 header {
     grid-column: 2;
     background-color: #fff;
-    padding: .25rem 2.5rem;
+    padding: .5rem 2.5rem;
     padding-right: 4rem;
     box-shadow: var(--odin-box-shadow);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
-    gap: .5rem 1.5rem;
+    gap: .5rem 1rem;
 
     >form {
         grid-column: 1 / 8;
         display: grid;
-        grid-template-columns: 1fr 9fr;
+        grid-template-columns: 1fr 13fr;
         align-items: center;
 
         button {
@@ -91,6 +102,11 @@ header {
             padding: 0;
             margin: 0;
             text-align: left;
+
+            img.icon {
+                vertical-align: middle;
+                cursor: pointer;
+            }
         }
 
         label {
@@ -118,19 +134,40 @@ header {
         }
     }
 
-    div.notifications {
+    .notifications {
         justify-self: end;
+        cursor: pointer;
     }
 
-    div.profile-link {
+    .profile-link {
         grid-column: 9 / 11;
+        justify-self: start;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
+        justify-items: center;
+        column-gap: .5rem;
+
+
+        .name-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     }
 
-    div.name-greeting {
+    .name-greeting {
         grid-column: 2 / 8;
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: .5rem;
+        }
+
+        .greeting {
+            font-size: 90%;
+            font-weight: bold;
+        }
     }
 
     button.blue-btn {
@@ -155,12 +192,35 @@ nav {
     align-content: start;
     row-gap: 3rem;
 
-    >div:first-of-type {
-        font-size: 1.75rem;
+    li {
+        display: grid;
+        grid-template-columns: 3rem auto;
+        align-items: center;
+        column-gap: .5rem;
+
+        img.icon {
+            justify-self: center;
+        }
+    }
+
+    li:first-of-type {
+        font-size: 1.65rem;
     }
 
     li:not(:last-of-type) {
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    li.nav-link.main.first {
+        margin-top: 3rem;
+    }
+
+    li.nav-link.conf.first {
+        margin-top: 4rem;
+    }
+
+    img.icon {
+        vertical-align: middle;
     }
 }
 
@@ -199,7 +259,8 @@ main {
 
             .card {
                 border-left: .5rem solid var(--odin-orange);
-                /* height: 12rem; */
+                display: grid;
+                align-items: start;
 
                 .card-title {
                     font-size: 1.15rem;
@@ -210,6 +271,23 @@ main {
                 .card-body {
                     font-size: 90%;
                     color: var(--odin-dark-gray);
+                }
+
+                .card-footer {
+                    align-self: end;
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns: min-content min-content min-content;
+                    grid-auto-flow: column;
+                    grid-auto-columns: min-content;
+                    align-items: center;
+                    justify-items: end;
+                    justify-content: end;
+                    column-gap: 2rem;
+
+                    img.icon {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -245,6 +323,15 @@ main {
             display: grid;
             grid-template-columns: auto auto;
             gap: 1rem .5rem;
+
+            .trendy-name,
+            .trendy-about {
+                font-size: 90%;
+            }
+
+            .trendy-about {
+                color: var(--odin-dark-gray);
+            }
         }
     }
 }
