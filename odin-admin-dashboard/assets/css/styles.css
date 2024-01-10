@@ -60,7 +60,6 @@ img {
 
 html {
     box-sizing: border-box;
-    font-size: 10px !important;
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -73,7 +72,7 @@ html {
 }
 
 body {
-
+    font-size: 90%;
     background-color: var(--odin-mid-gray);
     margin: 0;
     padding: 0;
@@ -203,10 +202,10 @@ header {
 nav {
     grid-column: 1;
     grid-row: 1 / -1;
-    min-width: 15rem;
+    min-width: 17.5rem;
     background-color: var(--odin-blue);
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #fff;
 
@@ -226,7 +225,7 @@ nav {
         font-size: 95%;
 
         &:first-of-type {
-            font-size: 1.65rem;
+            font-size: 1.5rem;
         }
     }
 
