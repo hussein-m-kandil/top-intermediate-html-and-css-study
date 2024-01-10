@@ -79,13 +79,14 @@ body {
     height: 100vh;
     height: 100svh;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 }
 
 header {
     grid-column: 2;
     grid-row: 1;
+    min-height: 10rem;
     background-color: #fff;
     padding: 1rem 2.5rem;
     padding-right: 4rem;
@@ -201,6 +202,7 @@ header {
 nav {
     grid-column: 1;
     grid-row: 1 / -1;
+    min-width: 15rem;
     background-color: var(--odin-blue);
     padding: 1rem;
     font-size: 1.25rem;
@@ -219,8 +221,12 @@ nav {
         }
     }
 
-    li:first-of-type {
-        font-size: 1.65rem;
+    li {
+        font-size: 95%;
+
+        &:first-of-type {
+            font-size: 1.65rem;
+        }
     }
 
     li:not(:last-of-type) {
@@ -243,8 +249,8 @@ nav {
 main {
     grid-column: 2;
     grid-row: 2 / -1;
-    width: 98%;
-    padding: 2rem 1rem 4rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto auto;
@@ -361,8 +367,11 @@ main {
 
 @media (orientation: portrait) {
     body {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
         grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content max-content;
+        grid-template-rows: auto auto auto;
     }
 
     header,
@@ -373,6 +382,7 @@ main {
 
     nav {
         grid-row: 1;
+        overflow: auto;
 
         li:not(:last-of-type),
         li.nav-link.main.first,
@@ -387,11 +397,16 @@ main {
             grid-auto-rows: 3rem;
             align-items: center;
             justify-items: start;
+            overflow: inherit;
 
             >li:first-of-type {
                 grid-column: 1 / -1;
                 align-self: start;
                 justify-self: center;
+            }
+
+            >li:not(:first-of-type) {
+                font-size: 85%;
             }
         }
     }
