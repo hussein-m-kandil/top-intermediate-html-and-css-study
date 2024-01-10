@@ -391,9 +391,17 @@ main {
             margin: initial;
         }
 
+        li {
+            grid-template-columns: auto auto;
+
+            img.icon {
+                justify-self: start;
+            }
+        }
+
         >ul {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
             grid-auto-rows: 3rem;
             align-items: center;
             justify-items: start;
